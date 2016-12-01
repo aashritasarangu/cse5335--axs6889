@@ -1,0 +1,25 @@
+
+.animated-row {
+    overflow: hidden;
+}
+.animated-row .animated-child {
+    position: relative;
+}
+.animated-row, .animated-row .animated-child{
+	border: 1px solid grey;
+	border-collapse: collapse;
+	/* padding: 5px; */
+    -webkit-transition: 1s linear all;
+    -moz-transition: 1s linear all;
+    -ms-transition: 1s linear all;
+    -o-transition: 1s linear all;
+    transition: 1s linear all;
+}
+.animated-row.ng-enter .animated-child, .animated-row.ng-leave.ng-leave-active .animated-child {
+    opacity:0;
+    right:-25%;
+}
+.animated-row.ng-leave .animated-child, .animated-row.ng-enter.ng-enter-active .animated-child {
+    opacity:1;
+    right:0%;
+}
